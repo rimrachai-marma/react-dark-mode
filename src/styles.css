@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --font-color: #333333;
+  --secondary-font-color: #555;
+  --background-color: #d8e8eb;
+}
+
+[data-theme="dark"] {
+  --font-color: #eee;
+  --secondary-font-color: #00ffff;
+  --background-color: #0a1929;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 65.5%; /* this define what 1rem is; 1rem = 10px; 10px/16px = 65.5% */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  line-height: 1.7;
+  font-size: 1.6rem;
+  background-color: var(--background-color);
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid rgb(80, 144, 211);
+}
+
+h1{
+  color: var(--font-color);
+  text-transform: capitalize;
+}
+
+.container{
+  max-width: 40.5rem;
+  margin: auto;
+}
+
+footer{
+  padding: 2rem 2rem 1rem 2rem;
+  border-top: 1px solid rgb(80, 144, 211);
+}
+
+footer p{
+  text-align: center;
+  color: var(--font-color);
+}

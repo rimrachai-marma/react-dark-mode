@@ -1,0 +1,14 @@
+.hello{
+  padding: 2rem;
+}
+
+.hello h2{
+  color: var(--font-color);
+  letter-spacing: 0.08rem;
+}
+
+.hello span{
+  color: var(--secondary-font-color);
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+}

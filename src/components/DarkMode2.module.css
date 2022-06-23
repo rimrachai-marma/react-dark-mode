@@ -1,0 +1,96 @@
+.checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+.check {
+  position: relative;
+  display: block;
+  width: 5rem;
+  height: 2.5rem;
+  background-color: #092c3e;
+  cursor: pointer;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox:checked ~ .check {
+  background-color: #eee;
+}
+
+.light-ball,
+.dark-ball {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.light-ball {
+  margin-left: .4rem;
+  background-color: #eee;
+
+  transform: translateX(0);
+  -webkit-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.checkbox:checked ~ .check .light-ball {
+  transform: translateX(-5rem);
+}
+
+.dark-ball {
+  margin-right: 4px;
+  background-color: #092c3e;
+  transform: translateX(5rem);
+  -webkit-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.checkbox:checked ~ .check .dark-ball {
+  transform: translateX(0);
+}
+
+.check span {
+  position: absolute;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.sun-icon,
+.moon-icon {
+  margin: .4rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: blueviolet;
+}
+
+.sun-icon {
+  opacity: 0;
+  transform: translateX(-5rem);
+
+  transition: ease-in 0.7s;
+}
+
+.checkbox:checked ~ .check .sun-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.moon-icon {
+  opacity: 1;
+  transform: translateX(0);
+
+  transition: ease-in 0.7s;
+}
+.checkbox:checked ~ .check .moon-icon {
+  opacity: 0;
+  transform: translateX(5rem);
+}
